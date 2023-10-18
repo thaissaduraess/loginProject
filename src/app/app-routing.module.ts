@@ -1,5 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 
 const routes: Routes = [
   {
@@ -7,8 +10,15 @@ const routes: Routes = [
   },
   {
     path: 'atividades',
-    loadChildren: () => import('./atividades/atividades.module').then(m => m.AtividadesModule)
+    loadChildren: () => import('./components/atividades/atividades.module').then(m => m.AtividadesModule)
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'dashboard', component: DashboardComponent
   }
+
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
