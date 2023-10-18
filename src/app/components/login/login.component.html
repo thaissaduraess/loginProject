@@ -1,15 +1,20 @@
 <h5> Login </h5>
 
-<div class="mb-3 row">
-  <label for="inputNameUser" class="col-sm-2 col-form-label">Usuário</label>
-  <div class="col-sm-10">
-    <input type="text" class="form-control" id="inputUser" placeholder="Seu Usuário">
+<form action="">
+
+  <div class="mb-3 row">
+    <label [(ngModel)]="usuario.nome" for="inputNameUser" class="col-sm-2 col-form-label">Usuário</label>
+    <div class="col-sm-10">
+      <input [(ngModel)]="usuario.senha" type="text" class="form-control" id="usuario" placeholder="Seu Usuário">
+    </div>
   </div>
-</div>
-<div class="mb-3 row">
-  <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
-  <div class="col-sm-10">
-    <input type="password" class="form-control" id="inputPassword">
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="senha">
+    </div>
   </div>
-</div>
-<button class="btn btn-primary" type="submit" (click)="fazerLogin">Entrar</button>
+  <button class="btn btn-primary" type="submit" (click)="fazerLogin">Entrar</button>
+
+
+</form>
