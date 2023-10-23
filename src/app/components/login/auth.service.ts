@@ -11,8 +11,8 @@ mostrarMenuEmitter = new EventEmitter<boolean>();
 
   constructor(private router: Router) { }
   fazerlogin(usuario: Usuario){
-    if (usuario.nome === 'usuario@email.com' &&
-    usuario.senha === '123456' ){
+    if (usuario.nome === 'thaissaduraess@gmail.com' &&
+    usuario.senha === 'teste123' ){
 
       this.UsuarioAutenticado = true;
 
