@@ -1,8 +1,9 @@
-import { LoginCadastroComponent } from '../../components/login-cadastro/login-cadastro.component';
+import { RegisterComponent } from '../../components/register/register.component';
 import { RouterModule, Routes } from '@angular/router';
 
 import { RecuperaSenhaComponent } from '../../components/recupera-senha/recupera-senha.component';
 import { AuthComponent } from './auth.component';
+import { LoginComponent } from 'src/app/components/login/login.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,8 @@ const routes: Routes = [
     component: AuthComponent,
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: AuthComponent },
-      { path: 'cadastro', component: LoginCadastroComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'registro', component: RegisterComponent },
       { path: 'recuperar', component: RecuperaSenhaComponent },
     ],
   },
