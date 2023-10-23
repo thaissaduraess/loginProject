@@ -8,7 +8,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { AtividadesModule } from './components/atividades/atividades.module';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  { path: '', pathMatch: 'full', redirectTo: 'auth' },
   {
     path: 'atividades',
     loadChildren: () => AtividadesModule,
@@ -16,10 +16,6 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => AuthModule,
-  },
-  {
-    path: 'login-cadastro',
-    component: LoginCadastroComponent,
   },
   {
     path: 'dashboard',
