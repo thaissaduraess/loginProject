@@ -6,19 +6,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AtividadesListaComponent } from '../components/atividades/atividades-lista/atividades-lista.component';
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     AtividadesListaComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
+  imports: [CommonModule, FormsModule, RouterModule, ReactiveFormsModule],
+  exports: [
+    NavbarComponent,
+    AtividadesListaComponent,
+    DashboardComponent,
+    PageNotFoundComponent,
   ],
-  exports: [CommonModule, FormsModule, ReactiveFormsModule, NavbarComponent, AtividadesListaComponent, DashboardComponent, PageNotFoundComponent]
 })
-export class SharedModule { }
+export class SharedModule {}
