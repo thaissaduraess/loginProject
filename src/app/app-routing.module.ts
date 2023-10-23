@@ -2,20 +2,20 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LoginCadastroComponent } from './modules/login/login-cadastro/login-cadastro.component';
+import { LoginCadastroComponent } from './components/login-cadastro/login-cadastro.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { LoginModule } from './modules/login/login.module';
+import { AuthModule } from './modules/auth/auth.module';
 import { AtividadesModule } from './components/atividades/atividades.module';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'atividades' },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
   {
     path: 'atividades',
     loadChildren: () => AtividadesModule,
   },
   {
-    path: 'login',
-    loadChildren: () => LoginModule,
+    path: 'auth',
+    loadChildren: () => AuthModule,
   },
   {
     path: 'login-cadastro',
