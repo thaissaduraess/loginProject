@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from './usuario';
+import { Usuario } from '../class/usuario';
 import { Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-  private UsuarioAutenticado: boolean = false;
+  private UsuarioAutenticado : boolean = false;
 
 mostrarMenuEmitter = new EventEmitter<boolean>();
 
@@ -18,7 +18,7 @@ mostrarMenuEmitter = new EventEmitter<boolean>();
 
       this.mostrarMenuEmitter.emit(true);
 
-      this.router.navigate(['dashboard'])
+      this.router.navigate(['/dashboard'])
 
     } else {
       this.UsuarioAutenticado = false;
