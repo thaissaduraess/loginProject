@@ -7,6 +7,8 @@ import { AtividadesListaComponent } from '../components/atividades/atividades-li
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
+import { RegisterComponent } from '../components/register/register.component';
+import { RecuperaSenhaComponent } from '../components/recupera-senha/recupera-senha.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,9 @@ import { RouterModule } from '@angular/router';
     AtividadesListaComponent,
     DashboardComponent,
     PageNotFoundComponent,
+    RegisterComponent,
+    RecuperaSenhaComponent,
+    DashboardComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule, ReactiveFormsModule],
   exports: [

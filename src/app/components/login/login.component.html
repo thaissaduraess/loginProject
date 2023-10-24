@@ -5,10 +5,9 @@
       id="tab-login"
       data-mdb-toggle="pill"
       role="tab"
-      [routerLink]="'login'"
-      routerLinkActive="active-class"
+      [routerLink]="'../login'"
+      routerLinkActive="active"
       aria-controls="pills-login"
-      aria-selected="true"
       >Login</a
     >
   </li>
@@ -18,11 +17,11 @@
       id="tab-register"
       data-mdb-toggle="pill"
       role="tab"
-      [routerLink]="'cadastro'"
-      routerLinkActive="active-class"
+      [routerLink]="'../registro'"
+      routerLinkActive="active"
       aria-controls="pills-register"
       aria-selected="false"
-      >Cadastrar</a
+      >Registrar</a
     >
   </li>
 </ul>
@@ -81,7 +80,7 @@
       <div class="text-center">
         <p>
           Não é cadastrado?
-          <a routerLink="recuperar">Faça o cadastro.</a>
+          <a routerLink="../recuperar">Faça o Registro.</a>
         </p>
       </div>
     </form>
